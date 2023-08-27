@@ -1,6 +1,18 @@
 import java.util.*;
 import java.util.concurrent.ThreadLocalRandom;
 
+/*
+* Based on Genshin Impact game, we want to create a damage calculator. This program would have a menu 
+* that allows the user to select if they want calculate damage, view highest damage, check last 10 
+* results or exit. When user selects first option, the program will distinguish between calculating 
+* damage for a single character or a combo. Later on, the program would select one type of reaction, 
+* would ask user to input specific information and based on strict formulas would return the final result 
+* (or results if we did calculations for multiple characters), while inserting it on two arrays that are 
+* useful for calculating the highest damage registered and last 10 results. 
+* These arrays are going to be used for the other two options, where the user would finally view those results. 
+* Finally, the fourth option would allow the user to get out, taking into consideration that the menu is iterative.
+*/
+
 public class GICalculator {
     // Declare the necessary variables for operating in the methods
     private static double atk, crit, critr, lvl, elm, multadd, multreac, multres, multtra, dmg, dmgRate, dmgtra, totAddDmg, dmgamp, comSum;
