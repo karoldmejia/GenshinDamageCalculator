@@ -1,12 +1,21 @@
+package ui;
+
 import java.util.*;
 
 public class ItemWeapon extends GIWeapons {
+    public static List<ItemWeapon> bowsWeapons = new ArrayList<ItemWeapon>();
+    public static ArrayList<ItemWeapon> catalystWeapons = new ArrayList<ItemWeapon>();
+    public static ArrayList<ItemWeapon> swordsWeapons = new ArrayList<ItemWeapon>();
+    public static ArrayList<ItemWeapon> polearmsWeapons = new ArrayList<ItemWeapon>();
+    public static ArrayList<ItemWeapon> claymoresWeapons = new ArrayList<ItemWeapon>();
+
+
     public ItemWeapon(String nameWeap, int lvlWeap, double atkWeap, double atkCritr, double atkCrit, double atkPercWeap) {
         super(nameWeap, lvlWeap, atkWeap, atkCritr, atkCrit, atkPercWeap);
     }
 
     public static void createWeapon(){
-        List<ItemWeapon> bowsWeapons = new ArrayList<ItemWeapon>();
+
         ItemWeapon weapon1 = new ItemWeapon("Polar Star", lvlWeap, 6, atkCritr, atkCrit, atkPercWeap);
         bowsWeapons.add(weapon1);
         ItemWeapon weapon2 = new ItemWeapon("Predator", lvlWeap, 4, atkCritr, atkCrit, atkPercWeap);
@@ -24,7 +33,6 @@ public class ItemWeapon extends GIWeapons {
         ItemWeapon weapon8 = new ItemWeapon("Messenger", lvlWeap, 2, atkCritr, atkCrit, atkPercWeap);
         bowsWeapons.add(weapon8);
 
-        ArrayList<ItemWeapon> catalystWeapons = new ArrayList<ItemWeapon>();
         ItemWeapon catalyst1 = new ItemWeapon("A Thousand Floating Dreams", lvlWeap, 5, atkCritr, atkCrit, atkPercWeap);
         catalystWeapons.add(catalyst1);
         ItemWeapon catalyst2 = new ItemWeapon("Blackcliff Agate", lvlWeap, 4, atkCritr, atkCrit, atkPercWeap);
@@ -42,7 +50,6 @@ public class ItemWeapon extends GIWeapons {
         ItemWeapon catalyst8 = new ItemWeapon("Skyward Atlas", lvlWeap, 7, atkCritr, atkCrit, atkPercWeap);
         catalystWeapons.add(catalyst8);
 
-        ArrayList<ItemWeapon> swordsWeapons = new ArrayList<ItemWeapon>();
         ItemWeapon sword1 = new ItemWeapon("Amenoma Kageuchi", lvlWeap, 3, atkCritr, atkCrit, atkPercWeap);
         swordsWeapons.add(sword1);
         ItemWeapon sword2 = new ItemWeapon("Fillet Blade", lvlWeap, 1, atkCritr, atkCrit, atkPercWeap);
@@ -60,7 +67,6 @@ public class ItemWeapon extends GIWeapons {
         ItemWeapon sword8 = new ItemWeapon("The Flute", lvlWeap, 4, atkCritr, atkCrit, atkPercWeap);
         swordsWeapons.add(sword8);
 
-        ArrayList<ItemWeapon> polearmsWeapons = new ArrayList<ItemWeapon>();
         ItemWeapon polearm1 = new ItemWeapon("The Catch", lvlWeap, 4, atkCritr, atkCrit, atkPercWeap);
         polearmsWeapons.add(polearm1);
         ItemWeapon polearm2 = new ItemWeapon("Calamity Queller", lvlWeap, 7, atkCritr, atkCrit, atkPercWeap);
@@ -78,7 +84,6 @@ public class ItemWeapon extends GIWeapons {
         ItemWeapon polearm8 = new ItemWeapon("White Tassel", lvlWeap, 1, atkCritr, atkCrit, atkPercWeap);
         polearmsWeapons.add(polearm8);
 
-        ArrayList<ItemWeapon> claymoresWeapons = new ArrayList<ItemWeapon>();
         ItemWeapon claymore1 = new ItemWeapon("Akuoumaru", lvlWeap, 4, atkCritr, atkCrit, atkPercWeap);
         claymoresWeapons.add(claymore1);
         ItemWeapon claymore2 = new ItemWeapon("Blackcliff Slasher", lvlWeap, 4, atkCritr, atkCrit, atkPercWeap);
@@ -98,3 +103,4 @@ public class ItemWeapon extends GIWeapons {
 
     }
 }
+

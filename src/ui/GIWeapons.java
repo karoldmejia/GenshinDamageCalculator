@@ -1,12 +1,10 @@
+package ui;
 import java.util.*;
-import java.util.concurrent.ThreadLocalRandom;
 
 public class GIWeapons {
     static double atkCritr, atkCrit, atkPercWeap;
-    private static Personaje personaje;
     String  nameWeap;
-    static int lvlWeap;
-    int atkWeap;
+    static int lvlWeap, atkWeap;
     public static Scanner txt = new Scanner(System.in);
 
     GIWeapons(String nameWeap, int lvlWeap, double atkWeap, double atkCritr, double atkCrit, double atkPercWeap){
@@ -17,13 +15,20 @@ public class GIWeapons {
         this.atkCritr=0;
         this.atkPercWeap=0;
     }
+    public static double getAtkChar() {
+        return atkChar;
+    }
+    public static double getAtkChar() {
+        return atkChar;
+    }
 
     public static int askingLvl(){
         System.out.println("Por favor ingresa el nivel de tu arma!");
         lvlWeap= txt.nextInt();
         return lvlWeap;
     }
-    public static void atkWeaponByLvl(int lvlWeap){
+    public static void atkWeaponByLvl(ItemWeapon weapon1){
+        ItemWeapon.createWeapon();
         ArrayList<ItemWeapon> bowsWeapons;
         askingLvl();
         int[][] rangAtk = {
@@ -42,24 +47,8 @@ public class GIWeapons {
         System.out.println("El valor en el rango es: " + valor);
     }
 
-    public static class Personaje {
-        private List<ItemWeapon> bowsWeapon;
-        Personaje personaje = new Personaje();
-
-        public List<ItemWeapon> getBowsWeapon() {
-            return bowsWeapon;
-        }
-    }
-
-        public static void mostrarElementos() {
-            List<ItemWeapon> listaArmas = personaje.getBowsWeapon();
-
-            for (ItemWeapon weapon : listaArmas) {
-                System.out.println(weapon);
-            }
-        }
-
     public static void main (String[] args) {
-        mostrarElementos();
+        GIWeapons selecWeapon = ItemWeapon weapon1;
+        atkWeaponByLvl(ItemWeapon weapon1);
     }
 }
